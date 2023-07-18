@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Login.css';
+import Register from '../Register/Register';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -22,14 +25,14 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+    <div className='all'>
+      <h2 className='title'>Login</h2>
+      <form className='form' onSubmit={handleLogin}>
         <input type="email" placeholder="Correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Iniciar sesión</button>
-        <button type="button" onClick={handleRegister}>Registrarse</button>
-      </form>
+        <button type="submit" className='btn-start'>Iniciar sesión</button>
+        <Link to ="/register" className='btn-register'> Sing Up</Link>
+      </form>    
     </div>
   );
 };

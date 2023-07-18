@@ -1,14 +1,10 @@
-// App.js
-
 import React from 'react';
-import Login from '../src/components/Login/Login';
-import Register from '../src/components/Register/Register';
+import AllRoutes from './components/routes/routes';
 
 const App = () => {
   return (
     <div>
-      <Login/>
-      
+      <AllRoutes/>     
     </div>
   );
 };

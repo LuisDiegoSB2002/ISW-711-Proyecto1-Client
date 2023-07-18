@@ -1,6 +1,7 @@
-//Nuevo
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import "./Register.css";
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -21,13 +22,14 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h2>Registro</h2>
+    <div className='all'>
+      <h2 className='title'>Registro</h2>
       <form onSubmit={handleRegister}>
         <input type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} required />
         <input type="email" placeholder="Correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Registrarse</button>
+        <button type="submit" className='btn-register'>Registrarse</button>
+        <Link to ="/login" className='btn-volver'> Volver</Link>
       </form>
     </div>
   );
