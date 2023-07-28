@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Login.css';
 import Register from '../Register/Register';
 import { Link } from 'react-router-dom';
+import HomePage from '../HomePage/HomePage';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,7 +14,9 @@ const Login = () => {
 
     try {
       const response = await axios.post('http://localhost:3001/login', { email, password });
+      
       console.log(response.data);
+      sessionStorage.setItem("token",response.data.token);
     } catch (error) {
       console.error(error.response.data);
     }
