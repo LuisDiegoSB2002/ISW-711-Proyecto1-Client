@@ -1,15 +1,16 @@
 import Navbar from "../NavBar/NavBar";
-import "./HomePage.css";
+import Footer from "../Footer/Footer";
+//import "./HomePage.css";
 const HomePage = () => {
-    
-  
-    return (
-      <div className='all'>
-        <Navbar></Navbar>
-        <h2 className='title'>Home Page</h2>
-        
+  return (
+    <div>
+      <div className="navbar">
+        <Navbar />
       </div>
-    );
-  };
-  
-  export default HomePage;
+      
+
+    </div>
+  );
+};
+
+export default HomePage;

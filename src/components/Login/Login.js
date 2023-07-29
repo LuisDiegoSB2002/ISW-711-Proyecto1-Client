@@ -17,9 +17,8 @@ const Login = () => {
 
     try {
       const response = await axios.post('http://localhost:3001/login', { email, password });
-      
-      console.log(response.data);
       sessionStorage.setItem("token",response.data.token);
+      sessionStorage.setItem("name",response.data.name);
       navigate("/homePage");
     } catch (error) {
       console.error(error.response.data);
@@ -39,7 +38,7 @@ const Login = () => {
         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button  type="submit" className='btn-start'>Iniciar sesión</button>
         <Link to ="/register" className='btn-register'> Sing Up</Link>
-        
+         
       </form>    
     </div>
   );

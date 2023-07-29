@@ -1,29 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'; 
-
+import './NavBar.css';
+import logoUser from "../../img/users.png";
+import logoCreateUser from "../../img/create-user-icon.png";
+import logoCreatePrompts from "../../img/create-promp-icon.png";
+import Logout from "../../img/logout-icon.png";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-header">
-        
+
+      <h2 className='name-user'> Bienvenido al sistema {sessionStorage.getItem("name")}</h2>
+
+      <div className='btn-nav'>
         <Link to="/UserList">
-          <img src="./users-icon.png" alt="Users" />
+          <img src={logoUser} />
         </Link>
-        
+
         <Link to="/CreateUser">
-          <img src="./create-user-icon.png" alt="Create User" />
+          <img src={logoCreateUser} />
         </Link>
-        
+
         <Link to="/create-promp">
-          <img src="./create-promp-icon.png" alt="Create Promp" />
+          <img src={logoCreatePrompts} />
+        </Link>
+        <Link to="/Logout">
+          <img src={Logout} />
         </Link>
       </div>
+
       
-      <div className="navbar-logout">
-        <img src="./logout-icon.png" alt="Logout" />
-      </div> 
+
+
     </nav>
   );
 };

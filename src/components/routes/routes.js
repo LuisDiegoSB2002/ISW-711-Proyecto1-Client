@@ -4,7 +4,7 @@ import Register from "../Register/Register";
 import HomePage from "../HomePage/HomePage.js";
 import Navbar from "../NavBar/NavBar.js";
 import UserList from "../UserCRUD/ListUsers/UserList.js";
-import CreateUser from "../UserCRUD/CrateUser/CreateUser.js";
+import CreateUser from "../UserCRUD/CreateUser/CreateUser.js";
 function AllRoutes() {
 
     return (
@@ -17,6 +17,8 @@ function AllRoutes() {
                 <Route path="/navBar" element={<Navbar />} />
                 <Route path="/UserList" element={<UserList />} />
                 <Route path="/CreateUser" element={<CreateUser />} />
+                <Route path="/EditeUser" element={<CreateUser />} />
+                <Route path="/DeleteUser" element={<CreateUser />} />
 
             </Routes>
 

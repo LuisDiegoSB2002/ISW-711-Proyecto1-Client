@@ -1,36 +1,43 @@
-/* Navbar.css */
+/* styles.css */
+
+/* Reset de estilos para el body y el navbar */
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #333;
-    color: #fff;
-    width: 80px;
-    height: 100vh;
-    padding-top: 20px;
-  }
-  
-  .navbar-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .navbar-header a {
-    text-decoration: none;
-    color: #fff;
-    display: block;
-  }
-  
-  .navbar-logout {
-    margin-top: auto;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .navbar-logout img {
-    cursor: pointer;
-  }
-  
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  box-shadow: 0 2px 5px rgba(22, 65, 115, 0.399); /* Sombra para resaltar el navbar */
+}
+
+.name-user {
+  font-size: 20px;
+  margin: 0;
+  color: #000000; /* Color del texto del nombre de usuario */
+}
+
+.btn-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 1150px;
+}
+
+.btn-nav img {
+  height: 40px;
+  margin: 8px;
+}
+
+.navbar-logout img {
+  height: 30px;
+  margin-left: 15px;
+}
+
+
+
+

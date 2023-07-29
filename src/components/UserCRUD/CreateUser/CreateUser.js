@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 
 const CreateUser = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user'); 
+  const [role, setRole] = useState('user');
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ const CreateUser = () => {
         }
       });
       console.log(response.data);
+      navigate("/UserList");
     } catch (error) {
       console.error(error.response.data);
     }
