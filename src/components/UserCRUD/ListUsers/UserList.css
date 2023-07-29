@@ -1,0 +1,44 @@
+/* UserList.css */
+
+/* Estilos para el contenedor principal */
+.all {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilos para el título "Lista de Usuarios" */
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Estilos para el contenedor de usuarios */
+  .contenedor {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Estilos para cada usuario */
+  .id-user {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Estilos para el nombre de usuario */
+  .name {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el correo electrónico del usuario */
+  .email {
+    margin: 0;
+  }
+  

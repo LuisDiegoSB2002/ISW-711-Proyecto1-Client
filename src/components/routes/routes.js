@@ -1,14 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../Login/Login.js";
 import Register from "../Register/Register";
+import HomePage from "../HomePage/HomePage.js";
+import Navbar from "../NavBar/NavBar.js";
+import UserList from "../UserCRUD/ListUsers/UserList.js";
+import CreateUser from "../UserCRUD/CrateUser/CreateUser.js";
 function AllRoutes() {
 
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<h1>Home Page</h1>}/>
-                <Route path="/login" element={<Login/>}/>
-                <Route path="/register" element={<Register/>}/>
+
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/homePage" element={<HomePage />} />
+                <Route path="/navBar" element={<Navbar />} />
+                <Route path="/UserList" element={<UserList />} />
+                <Route path="/CreateUser" element={<CreateUser />} />
+
             </Routes>
 
         </BrowserRouter>
