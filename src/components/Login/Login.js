@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
 import Register from '../Register/Register';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import HomePage from '../HomePage/HomePage';
-import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -18,6 +18,7 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:3001/login', { email, password });
       sessionStorage.setItem("token",response.data.token);
+      
       sessionStorage.setItem("name",response.data.name);
       navigate("/homePage");
     } catch (error) {

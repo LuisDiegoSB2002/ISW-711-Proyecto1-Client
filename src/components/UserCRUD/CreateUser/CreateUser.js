@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+
 
 
 const CreateUser = () => {
@@ -37,8 +37,8 @@ const CreateUser = () => {
         <input type="email" placeholder="Correo electrónico" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="user">Usuario</option>
-          <option value="admin">Administrador</option>
+          <option value="user">user</option>
+          <option value="admin">admin</option>
         </select>
         <button to ="/UserList" type="submit" className='btn-register'>Crear</button>
         <Link to ="/UserList" className='btn-volver'> Volver</Link>

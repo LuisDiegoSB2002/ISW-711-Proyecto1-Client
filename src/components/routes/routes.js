@@ -1,10 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route ,useParams } from "react-router-dom";
 import Login from "../Login/Login.js";
 import Register from "../Register/Register";
 import HomePage from "../HomePage/HomePage.js";
 import Navbar from "../NavBar/NavBar.js";
 import UserList from "../UserCRUD/ListUsers/UserList.js";
 import CreateUser from "../UserCRUD/CreateUser/CreateUser.js";
+import EditUser from "../UserCRUD/EditUser/EditUser.js";
+import DeleteUser from "../UserCRUD/DeleteUser/DeleteUser.js";
 function AllRoutes() {
 
     return (
@@ -17,8 +19,8 @@ function AllRoutes() {
                 <Route path="/navBar" element={<Navbar />} />
                 <Route path="/UserList" element={<UserList />} />
                 <Route path="/CreateUser" element={<CreateUser />} />
-                <Route path="/EditeUser" element={<CreateUser />} />
-                <Route path="/DeleteUser" element={<CreateUser />} />
+                <Route path="/EditUser/:id" element={<EditUser/>} />
+                <Route path="/DeleteUser/:id" element={<DeleteUser />} />
 
             </Routes>
 
