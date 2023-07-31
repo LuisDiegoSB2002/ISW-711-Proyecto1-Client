@@ -7,6 +7,8 @@ import UserList from "../UserCRUD/ListUsers/UserList.js";
 import CreateUser from "../UserCRUD/CreateUser/CreateUser.js";
 import EditUser from "../UserCRUD/EditUser/EditUser.js";
 import DeleteUser from "../UserCRUD/DeleteUser/DeleteUser.js";
+
+import CreatePrompts from "../PromptsCRUD/CreatePrompts/CreatePrompts.js";
 function AllRoutes() {
 
     return (
@@ -21,6 +23,8 @@ function AllRoutes() {
                 <Route path="/CreateUser" element={<CreateUser />} />
                 <Route path="/EditUser/:id" element={<EditUser/>} />
                 <Route path="/DeleteUser/:id" element={<DeleteUser />} />
+
+                <Route path="/createPrompts" element={<createPrompts/>} />
 
             </Routes>
 
