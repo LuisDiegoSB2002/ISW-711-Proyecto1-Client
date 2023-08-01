@@ -1,11 +1,16 @@
-/* styles.css */
-
-/* Estilos generales para el contenedor */
+.id-user{
+    background-color: rgb(248, 247, 247);
+    color: black;
+    width: 400px;
+    margin-top: 10px;
+    column-span:all;
+  }
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+  
   
   /* Estilos para cada usuario */
   .user {
@@ -52,4 +57,5 @@
     text-decoration: none;
     
   }
+  
   

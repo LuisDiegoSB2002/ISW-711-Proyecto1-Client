@@ -17,7 +17,7 @@ const CreatePrompts = () => {
 
     try {
         
-      const response = await axios.post('http://localhost:3001/createNewUser', { name, tipo, idUser, etiquetas }, {
+      const response = await axios.post('http://localhost:3001/createPrompts', { name, tipo, idUser, etiquetas }, {
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token")
         }
@@ -30,9 +30,21 @@ const CreatePrompts = () => {
   };
 
   return (
-    <div >
-      <h2 >Registro</h2>
-      
+    <div className='all'>
+      <h2 className='title'>Registro</h2>
+      <form onSubmit={handleRegister}>
+        <input type="text" placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} required />
+        <select value={tipo} onChange={(e) => setTipo(e.target.value)}>
+          <option value="Edit">Edit</option>
+          <option value="Images">Images</option>
+          <option value="Completitions">Completitions</option>
+        </select>
+        
+        <input type="etiquetas" placeholder="Etiquetas" value={etiquetas} onChange={(e) => setEtiqueta(e.target.value)} required />
+        
+        <button to ="/HomePage" type="submit" className='btn-register'>Crear</button>
+        <Link to ="/HomePage" className='btn-volver'> Volver</Link>
+      </form>
     </div>
   );
 };

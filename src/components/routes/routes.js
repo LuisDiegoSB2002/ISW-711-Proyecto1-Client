@@ -24,7 +24,7 @@ function AllRoutes() {
                 <Route path="/EditUser/:id" element={<EditUser/>} />
                 <Route path="/DeleteUser/:id" element={<DeleteUser />} />
 
-                <Route path="/createPrompts" element={<createPrompts/>} />
+                <Route path="/createPrompts" element={<CreatePrompts/>} />
 
             </Routes>
 
