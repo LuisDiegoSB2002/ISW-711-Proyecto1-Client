@@ -9,6 +9,7 @@ import EditUser from "../UserCRUD/EditUser/EditUser.js";
 import DeleteUser from "../UserCRUD/DeleteUser/DeleteUser.js";
 
 import CreatePrompts from "../PromptsCRUD/CreatePrompts/CreatePrompts.js";
+import EditPrompts from "../PromptsCRUD/EditPrompts/EditPrompts.js";
 import DeletePrompts from "../PromptsCRUD/DeletePrompts/DeletePrompts.js";
 
 import Logout from "../Logout/Logout.js";
@@ -26,10 +27,9 @@ function AllRoutes() {
                 <Route path="/CreateUser" element={<CreateUser />} />
                 <Route path="/EditUser/:id" element={<EditUser/>} />
                 <Route path="/DeleteUser/:id" element={<DeleteUser />} />
-
                 <Route path="/createPrompts" element={<CreatePrompts/>} />
                 <Route path="/DeletePrompts/:id" element={<DeletePrompts/>} />
-                <Route path="/EditPrompts/:id" element={<CreatePrompts/>} />
+                <Route path="/EditPrompts/:id" element={<EditPrompts/>} />
                 <Route path="/Logout" element={<Logout/>} />
 
             </Routes>

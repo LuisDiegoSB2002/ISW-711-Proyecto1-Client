@@ -23,7 +23,7 @@ const CreatePrompts = () => {
         }
       });
       console.log(response.data);
-      navigate("/Home");
+      navigate("/HomePage");
     } catch (error) {
       console.error(error.response.data);
     }

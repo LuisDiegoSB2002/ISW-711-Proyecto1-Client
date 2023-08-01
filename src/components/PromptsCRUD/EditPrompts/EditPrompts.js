@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams,useNavigate, Link } from 'react-router-dom';
 
 
-const EditUser = () => {
+const EditPrompts = () => {
 
   const [name, setName] = useState('');
   const [tipo, setTipo] = useState('');
@@ -31,7 +31,7 @@ const EditUser = () => {
     try {
       // Realizar la solicitud PUT al servidor
       const response = await fetch(`http://localhost:3001/editPrompts/${id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: {
           Authorization: "Bearer " + sessionStorage.getItem("token")
         },
@@ -69,10 +69,10 @@ const EditUser = () => {
         </select>
         <input type="etiquetas" value={etiqueta} onChange={(e) => setEtiquetas(e.target.value)} />
         <button type="button" onClick={handleEditPrompts}>Guardar Cambios</button>
-        <Link to ="/UserList" className='btn-volver'> Volver</Link>
+        <Link to ="/HomePage" className='btn-volver'> Volver</Link>
       </form> 
     </div>
   );
 };
 
-export default EditUser;
+export default EditPrompts;
