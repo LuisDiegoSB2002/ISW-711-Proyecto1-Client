@@ -20,16 +20,13 @@ const Login = () => {
       sessionStorage.setItem("token",response.data.token);
       
       sessionStorage.setItem("name",response.data.name);
+      
       navigate("/homePage");
     } catch (error) {
       console.error(error.response.data);
     }
   };
 
-  const handleRegister = () => {
-    // Redireccionar a la página de registro
-    window.location.href = '/register';
-  };
 
   return (
     <div className='all'>

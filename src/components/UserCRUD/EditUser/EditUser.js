@@ -57,7 +57,7 @@ const EditUser = () => {
   };
 
   return (
-    <div>
+    <div className='all'>
       <h2>Editar Usuario</h2>
       <form>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />

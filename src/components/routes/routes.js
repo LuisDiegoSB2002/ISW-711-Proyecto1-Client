@@ -9,10 +9,13 @@ import EditUser from "../UserCRUD/EditUser/EditUser.js";
 import DeleteUser from "../UserCRUD/DeleteUser/DeleteUser.js";
 
 import CreatePrompts from "../PromptsCRUD/CreatePrompts/CreatePrompts.js";
+import DeletePrompts from "../PromptsCRUD/DeletePrompts/DeletePrompts.js";
+
+import Logout from "../Logout/Logout.js";
 function AllRoutes() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter> 
             <Routes>
 
                 <Route path="/login" element={<Login />} />
@@ -25,6 +28,9 @@ function AllRoutes() {
                 <Route path="/DeleteUser/:id" element={<DeleteUser />} />
 
                 <Route path="/createPrompts" element={<CreatePrompts/>} />
+                <Route path="/DeletePrompts/:id" element={<DeletePrompts/>} />
+                <Route path="/EditPrompts/:id" element={<CreatePrompts/>} />
+                <Route path="/Logout" element={<Logout/>} />
 
             </Routes>
 

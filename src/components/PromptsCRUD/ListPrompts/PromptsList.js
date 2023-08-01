@@ -25,7 +25,7 @@ const PromptsList = () => {
   return (
     <div>
       
-      <h2 className='titulo'>Lista de Usuarios</h2>
+      <h2 className='titulo'>Lista de Prompts</h2>
 
       <ul className='contenedor'>
         <div className='user'>
@@ -39,7 +39,7 @@ const PromptsList = () => {
               <Link to ="/createPrompts" className='btn-create'> <img src={logoCrate} /></Link>
               <Link to={`/EditPrompts/${prompt._id}`} className='btn-edit'> <img src={logoEdit} /></Link>
               <Link to ={`/DeletePrompts/${prompt._id}`} className='btn-delete'> <img src={logoDelete} /></Link>
-            </li>
+            </li> 
             
           ))}
         </div>

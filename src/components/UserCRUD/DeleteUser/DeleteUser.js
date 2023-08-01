@@ -31,7 +31,7 @@ const DeleteUser = () => {
   };
 
   return (
-    <div>
+    <div className='all'>
       <h1>¿Está seguro de eliminar este Usuario?</h1>
       
       <button onClick={handleDeleteUser}>Eliminar Usuario</button>

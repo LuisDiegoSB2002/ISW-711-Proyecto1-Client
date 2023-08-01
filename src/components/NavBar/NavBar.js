@@ -21,7 +21,7 @@ const Navbar = () => {
           <img src={logoCreateUser} />
         </Link>
 
-        <Link to="/create-promp">
+        <Link to="/createPrompts">
           <img src={logoCreatePrompts} />
         </Link>
         <Link to="/Logout">
